@@ -1,0 +1,18 @@
+.header{
+  position: fixed;
+  flex:0 0 auto;
+  height: 90px;
+  width: 100%;
+  background-color: orange;
+
+  display: flex;
+  align-items: center;
+
+  color: white;
+  font-family: Impact;
+}
+.header img{
+  margin-left: 90px;
+  height: 90px;
+  width: 90px;
+}

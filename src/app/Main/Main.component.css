@@ -1,0 +1,11 @@
+.main{
+  flex:1 0 auto;
+  margin-top: 90px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Impact;
+}

@@ -1,0 +1,13 @@
+.footer{
+  flex:0 0 auto;
+  height: 200px;
+  background-color: orange;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-family: Impact;
+}
