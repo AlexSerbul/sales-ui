@@ -1,0 +1,12 @@
+.lot{
+  padding: .5rem .5rem;
+  border: 2px dashed #ccc;
+  margin-bottom: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  width: 15rem;
+  height: 20rem;
+}
+h2{
+  margin-bottom: .5rem;
+}
