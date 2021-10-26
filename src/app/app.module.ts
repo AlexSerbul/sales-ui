@@ -5,20 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {LotComponent} from  './Lot/lot.component';
 import {HeaderComponent} from './Header/header.component';
-import  {BannerComponent} from "./Footer/Footer.component";
+import  {FooterComponent} from "./Footer/Footer.component";
 import {MainComponent} from "./Main/Main.component";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     LotComponent,
     HeaderComponent,
-    BannerComponent,
+    FooterComponent,
     MainComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
