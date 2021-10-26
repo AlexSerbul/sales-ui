@@ -4,14 +4,59 @@
     <h1>Sales Demo UI</h1>
   </div>
   <div class="dropdown">
-    <select>
-      <option>
-        User
-      </option>
-      <option>
-        Store
-      </option>
-    </select>
+    <img alt="dropdownimg" src="assets/dropdown.png" class="dropbtn">
+    <div class="dropdown-content">
+      <button class="dropdownbutton" (click)="open(reg)">Register</button>
+      <button class="dropdownbutton" (click)="open(log)">Authorize</button>
+    </div>
   </div>
 
 </header>
+
+<ng-template #reg let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-reg-title">Registration Form</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="inputContainer">
+      <p>Login</p>
+      <input type="text" id="reglogField" name="login" placeholder="Your login">
+      <p>Email</p>
+      <input type="text" id="regemailField" name="email" placeholder="Your email">
+      <p>First name</p>
+      <input type="text" id="regfNameField" name="firstName" placeholder="Your first name">
+      <p>Last name</p>
+      <input type="text" id="reglNameField" name="lastName" placeholder="Your last name">
+      <p>Password</p>
+      <input type="text" id="regpass1Field" name="password1" placeholder="Your password">
+      <p>Repeat password</p>
+      <input type="text" id="regpass2Field" name="password2" placeholder="Repeat your password">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="modal-btn" (click)="modal.close('Save click')">Register</button>
+  </div>
+</ng-template>
+
+<ng-template #log let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-log-title">Authorization</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="inputContainer">
+      <p>Login</p>
+      <input type="text" id="logField" name="login" placeholder="Your login">
+      <p>Password</p>
+      <input type="text" id="passField" name="password" placeholder="Your password">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="modal-btn" (click)="modal.close('Save click')">Authorize</button>
+  </div>
+</ng-template>
