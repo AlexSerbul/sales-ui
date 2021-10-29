@@ -23,6 +23,24 @@
   align-items: center;
 }
 
+.logobutton{
+  margin-left: 100px;
+  padding: 5px;
+
+  background-color: #FCBB0D;
+
+  color: white;
+
+  font-size: 25px;
+
+  border: solid 3px white;
+  border-radius: 5px;
+}
+
+.logobutton:hover{
+  background-color: orange;
+}
+
 .dropbtn {
   color: white;
   padding: 16px;

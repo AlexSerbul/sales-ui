@@ -3,6 +3,7 @@
 
 import {Component} from '@angular/core';
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {UserService} from "../service/user.service";
 
 @Component({
   selector: 'app-header',
@@ -12,8 +13,10 @@ import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 export class HeaderComponent {
   closeResult: string | undefined;
+  public usersList: string | undefined;
   constructor(
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private userService: UserService
   ) {
   }
 
@@ -33,6 +36,12 @@ export class HeaderComponent {
     } else {
       return `with: ${reason}`;
     }
+  }
+
+  public getUsers(content: any){
+    this.userService.getUsers().subscribe(
+      (response) => { this.usersList = response; console.log(this.usersList);})
+    this.open(content);
   }
 }
 
